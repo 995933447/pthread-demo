@@ -1,7 +1,7 @@
 <?php 
 //pthreads v3引入了Threaded对象自动不变性的概念
 //如果成员被设置成Threaded对象，那么它将不能被再次改写
-//当然，这主要还是为了性能优化，但有时我们又需要改写成员，那么就需要继承自Volatile类了,Volatile类并非继承threaded类，网上有错误，在volatile2.php得到实践
+//当然，这主要还是为了性能优化，但有时我们又需要改写成员，那么就需要继承自Volatile类了,Volatile类并非继承threaded类
 class Task extends Thread
 {
     private $data;
