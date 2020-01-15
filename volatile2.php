@@ -37,5 +37,3 @@ class Task extends Volatile
 }
 
 $task = new Task();
-//没有start方法说明并非继承volatile类
-// $task->start();
