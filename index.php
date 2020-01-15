@@ -33,11 +33,9 @@ $threadA = new Task();
 $threadB = new Task();
 $MyWorker->stack($threadA);
 $MyWorker->stack($threadB);
-$MyWorker->start();//实验证明必须start执行之后  子线程的run才开始执行
+$MyWorker->start();
 //循环的清理完成任务的线程，会阻塞主线程，直到栈中任务都执行完毕,释放资源
 while ($MyWorker->collect());
 //在执行完已入栈对象之后，关闭这个 Worker 对象
 $MyWorker->shutdown();
-
-
  ?>
